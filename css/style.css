@@ -1,0 +1,68 @@
+
+:root
+{
+    --game-container-bg-color:#f00;
+    --spaceship-bg-color-even: pink;
+    --spaceship-bg-color-odd: green;
+    --cannon-bg-color:yellow;
+}
+
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;;
+}
+
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 15px;
+    font-size:1.1rem;
+    
+}
+
+
+#game-container
+{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--game-container-bg-color);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+
+
+}
+
+.spaceships
+{
+    width:75px;
+    height:50px;
+    justify-self: center;
+}
+
+
+#cannon
+{
+    width:75px;
+    height: 75px;
+    background-color: var(--cannon-bg-color);
+    position: absolute;
+    bottom: 20px;
+    
+
+}
+
+#game-container > .spaceships:nth-child(even)
+{
+    background-color: var(--spaceship-bg-color-even);
+}
+
+#game-container > .spaceships:nth-child(odd)
+{
+    background-color: var(--spaceship-bg-color-odd);
+}
